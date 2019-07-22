@@ -5,7 +5,7 @@ Make archive with tar form directory data with no compression::
 
     tar cvf databackup.tar ./data
 
-List all files in backup.tar
+List all files in backup.tar::
 
     tar tvf backup.tar 
 
