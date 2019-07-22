@@ -81,3 +81,44 @@ Finding paths wit locate::
 If not found use update DB::
 
     updatedb
+
+***********************
+Searching with Anchors
+***********************
+
+^ Is used as starting sign
+$ is the end sign
+
+Find Lines that starts with 'The'::
+
+    grep '^The' alice.txt
+
+Regular Expression for lowercase letters::
+
+- Uppercase-Letter: [A-Z]
+- Lowercase-Letters: [a-z]
+- vowel: [aeiou]
+- Numbers: [0-9]
+
+So 'The' could also be searched like this::
+
+    grep '^T[a-z][aeiou]' alice.txt
+
+Search everything that ist not this letter::
+
+    [^a]
+
+Words Search
+===============
+
+Searching for words with space before and after like ' the '::
+
+    --> \<  \>
+
+Search every ' the '/' The ' now matter if starting word (-> No '^')::
+
+    grep '\<[tT]he\>' alice.txt
+
+Find every word that has to letters together::
+
+    grep '\([a-z]\)\1' alice.txt
