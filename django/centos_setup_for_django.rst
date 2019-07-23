@@ -65,6 +65,16 @@ Install Python 3.7::
     [root ] $ make altinstall
     [root ] $ exit
 
+===============
+Install Pip3
+===============
+
+Install python3-Tools and pip3::
+    
+    yum install python36
+    yum install python36-devel
+    yum install python36-setuptools
+    easy_install-3.6 pip
 
 ===============
 Install Django
