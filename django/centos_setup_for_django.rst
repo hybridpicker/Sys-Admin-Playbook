@@ -81,7 +81,13 @@ Create Virtualenv Python 3
 ==========================
 
 Create virtual env with python3::
-    virtualenv -p python3 django3
+   
+   virtualenv -p python3 django3
+
+Activate venv::
+
+    source venv/bin/activate
+
 
 ===============
 Install Django
