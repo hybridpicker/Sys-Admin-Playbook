@@ -76,6 +76,13 @@ Install python3-Tools and pip3::
     yum install python36-setuptools
     easy_install-3.6 pip
 
+==========================
+Create Virtualenv Python 3
+==========================
+
+Create virtual env with python3::
+    virtualenv -p python3 django3
+
 ===============
 Install Django
 ===============
