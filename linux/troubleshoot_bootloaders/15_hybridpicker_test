@@ -1,0 +1,9 @@
+#!/bin/sh -e
+echo "displayed wen update-grub is run"
+cat << EOF
+menuentry "Other Linux Partition" {
+set root=(hd0,3)
+linux /boot/vmlinuz
+initrd /boot/initrd.img
+}
+EOF
