@@ -1,0 +1,8 @@
+ #!/bin/sh -e
+  2 echo "Adding Windows partition to grub menu"
+  3 cat << EOF
+  4 menuentry "Windows" {
+  5 set root=(hd2,1)
+  6 chainloader (hd2,1)+1
+  7 }
+  8 EOF
