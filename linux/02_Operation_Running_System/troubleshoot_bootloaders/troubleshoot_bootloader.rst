@@ -28,7 +28,7 @@ Menu entries for entries::
 
 These are numberd because it is runned in thtat order.
 
-To create new grub file always start with template in /etc/default/grub.
+To create new grub file always start with template in /etc/default/grub::
 
     less/etc/default/grub.
 
