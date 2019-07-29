@@ -65,8 +65,9 @@ Desktop makes a network call to that server - asking for a webpage. The server l
 
 IMPORTANT!:
 
+********************
 Common Network Ports
-====================
+********************
 
 Port Number -------- Protocol -------- Server Application
      
@@ -84,4 +85,37 @@ Port Number -------- Protocol -------- Server Application
 
 -------443---------------HTTPS-----------Apache, Nginx
 
+***********************************
+Other Important Server Applications
+***********************************
 
+File Server
+===========
+
+NFS: 
+
+NetworkFileServer for filesharing between a server and client-system -> common on many UNIX Systems
+
+SAMBA/CIS:
+
+Give the opportunity to serve up files to Windows Clients on the same Network
+
+Database Servers
+================
+
+MySQL:
+
+-> now owend by oracle. 
+
+clone named MariaDB (-> not owend by Oracle)
+
+
+PostgresSQL:
+
+more advanced tha MySQL
+
+CUPS
+====
+
+CommonUnixPrintingServer -> open source printed server, primarliy developed by Apple
+Makes it possible to print -> Printer Client
