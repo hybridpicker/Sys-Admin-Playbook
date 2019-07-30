@@ -1,6 +1,6 @@
-==================
+******************
 Package Management
-==================
+******************
 
 - Software for install software on a linux system
 
@@ -97,3 +97,136 @@ Modern distribution checks periodically for updates:
 
 - Notification will appear in a graphical -> Can approve updates
 - CommandLine: User hast to initial-check
+
+******************
+Commands
+******************
+
+======================
+YUM - Update - Command
+======================
+
+Get Info of package::
+
+    yum info package
+
+Install package::
+
+    yum install package
+
+To skip yes of installing::
+
+    yum install -y package
+
+List installed package::
+
+    yum list installed package
+
+Remove software::
+
+    yum remove package
+
+-> While uninstalling a package, the need dependencies get left behind and will NOT automatically be uninstalled. Because i could be that another package needs this dependency too.
+
+To get sure, that depndencies are removed that only the package needs::
+
+    yum autoremove package
+
+To see if package is installed::
+
+    which package
+
+or
+
+    yum list package
+
+Repositories
+============
+
+To see which repositories are linked to the system::
+
+    yum repolist
+
+On RedHat-based systems repository information is saved in directory::
+
+    etc/yum.repos.d
+
+While listing with ls you can see that every repository has extension .repo.
+
+Update Yum
+===============
+
+Clear cache of yum::
+
+    yum clean all
+
+Then updating yum::
+
+    yum update
+
+
+======================
+RPM - Command
+======================
+
+Was the original command to install software on RedHat-based-Linux.
+Where yum will check wich dependency is needed for the package, rpm does not. 
+If dependencies are need, you have to locate those files, download and install them first. These came known as the "Dependecy Hell".
+
+Rpm is still used for installing packages.
+
+Install packages with::
+
+    rpm -i package-2.13.e17.x86_64.rpm
+
+-> Will install without any information prompted on the screen. To change that we can use 'v' (verbose) and 'h' for showing a progress bar.
+
+So the command looks now like this::
+
+    rpm -ivh package-2.13.e17.x86_64.rpm
+
+Verify with 'which'-command
+
+    which package
+
+The query command of RPM
+========================
+
+To get the full package name, version and architecture::
+
+    rpm -q package
+
+To get full info add 'i' (for Info) to -q:
+
+    rpm -qi package
+
+-> Kind of the same output of yum info
+
+To see which files are install use 'l'::
+
+    rpm -ql package
+
+To see documentation use 'd' (Documentation)::
+
+    rpm -qd package
+
+See wich dependencies are required ('R') for that package::
+
+    rpm -qR package
+
+Update package with 'U' ('Update')::
+
+    rpm -Uvh package
+
+Delete with 'e' ('Erase'):
+
+Before deleting:
+Yum is good for preventing us to destroy our system. With rpm a little more is required.
+
+So we can --test with rpm for deleting the package, to make sure everything will work fine::
+
+    rpm --test -e package
+
+When no warnings appear -> Ready to delete::
+
+    rpm -e package
