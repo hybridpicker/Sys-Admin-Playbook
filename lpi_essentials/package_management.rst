@@ -230,3 +230,50 @@ So we can --test with rpm for deleting the package, to make sure everything will
 When no warnings appear -> Ready to delete::
 
     rpm -e package
+    
+    
+======================
+APT - Command
+======================
+
+Mainly, same as YUM-Command. One difference is that apt hast a file where all online locations are listed. Yum uses multiple .repo -Files.
+
+at /etc/apt/source.list You can find this list
+
+Update apt::
+
+    apt update
+
+Before, there should be some tests done:
+
+To search for application::
+
+    apt-cache search command
+
+to install::
+
+    apt install package
+
+Verify and check with wich-command::
+
+    which package
+
+Remove package with::
+
+    apt remove package
+
+To uninstall any configuration files that probaply get left behind from the package with --purge.
+
+    apt remove --purge package
+
+To clean system up use "autoremove"::
+
+    apt autoremove
+
+To upgrade apt::
+
+    apt upgrade
+
+Full Upgrade any application::
+
+    apt full-upgrade
