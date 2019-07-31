@@ -266,6 +266,7 @@ To uninstall any configuration files that probaply get left behind from the pack
 
     apt remove --purge package
 
+
 To clean system up use "autoremove"::
 
     apt autoremove
@@ -277,3 +278,41 @@ To upgrade apt::
 Full Upgrade any application::
 
     apt full-upgrade
+
+======================
+DPKG - Command
+======================
+
+In the past it was the main package command.
+All Files are with .deb extensions.
+
+To check if an application is already installed::
+
+    dpkg --get-selection
+
+-> Shows all Packages in the system
+
+to get more information about the package (-I)::
+
+    dpkg-deb -I package
+
+Get info about package-name, version, architecture etc.
+
+Install with -i option::
+
+    dpkg -i package
+
+-> If Error: Dependency problem::
+
+    apt update
+    apt -f upgrade
+
+Kind of cheet. Chance that needed dependencies are installed from the cache.
+
+To remove -r::
+
+    dpkg -r package
+
+To purge all configuration files that comes with the package -P::
+
+    dpkg -P package
