@@ -6,7 +6,7 @@ LS Command
 
     ls
 
--a shows All files (including hidden files) mostly with .filename -> . stands for hidden
+-a shows All files (including hidden files) mostly with .filename -> . stands for hidden ::
 
     ls -a
 
