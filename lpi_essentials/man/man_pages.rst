@@ -79,3 +79,10 @@ Manual Page of man
 Manual itself has also a man-Page::
 
     man man
+
+Search in the man pages for some keywords ::
+
+    /<keyword>
+
+And jump with 'n' to the next highlighted keyword.
+
