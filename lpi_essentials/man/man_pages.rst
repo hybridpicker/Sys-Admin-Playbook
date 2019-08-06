@@ -10,7 +10,7 @@ Using command line to get help. man stands for Manual. Not written to be tutoria
 Manual Sections
 ================
 
-Manual Pages are divided into 9 Sections:
+Manual Pages are divided into 9 Sections::
 
     Section 1: Executable programs and shell commands 
     
