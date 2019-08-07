@@ -62,7 +62,7 @@ With the -r(recursively) flag, zip goes into every file in the archive and compr
 unzip-Command
 ===============
 
-Extracting a zip archive.
+Extracting a zip archive. ::
 
     unzip archive.zip
 
