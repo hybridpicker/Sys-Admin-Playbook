@@ -40,3 +40,6 @@ Sort content with last modified file -t::
 
     ls -lt
 
+Human readable -h  in combination with -l gives size output::
+    
+    ls -lh
