@@ -26,5 +26,16 @@ vi
 - :wq! – this will save our file and close the vi text editor
 - :q! – quotes no changes or anything is saved
 - u – undo last change
+- dw - delete word under cursor
 - w! – saves and closes
 - q!–close vi-editor
+- gg - jump to top of the line
+- A - append text at the end of the line
+
+=========
+vimtutor
+=========
+
+Complete Tutorial how to use vim ::
+
+    $ vimtutor
