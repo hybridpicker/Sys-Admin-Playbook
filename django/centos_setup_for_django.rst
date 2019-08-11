@@ -191,7 +191,7 @@ Install Pyscopg::
 
 ========================================
 Backing Out of the Virtual Environment
-=========================================
+========================================
 
 Since we are now done with the Django portion of the guide, we can deactivate our virtual environment::
 
