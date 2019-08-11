@@ -150,15 +150,21 @@ Udpate pip::
     pip install -U pip
     pip install -U virtualenv
 
-Create virutalenv::
+==================
+Create Virtualenv
+==================
 
-    python3.7 -mvenv env
-    source env/bin/activate
-    pip install --upgrade pip
+Create your first virtual environment with the name of your first site or project by typing::
+
+    which python3 #Output: /usr/bin/python3
+    mkvirtualenv --python=/usr/bin/python3 nameOfEnvironment
+
+    pip install django
 
 
-
-Setup Postgres:
+================
+Setup Postgres
+================
 
 Install Pyscopg::
 
