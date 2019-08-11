@@ -189,3 +189,14 @@ Install Pyscopg::
     if os.path.isfile(os.path.join(BASE_DIR, 'local_settings.py')):
         from local_settings import *
 
+========================================
+Backing Out of the Virtual Environment
+=========================================
+
+Since we are now done with the Django portion of the guide, we can deactivate our virtual environment::
+
+    deactivate
+    
+If you need to work on either of your Django sites again, you should reactivate their respective environments. You can do that by using the workon command ::
+
+    workon envName
