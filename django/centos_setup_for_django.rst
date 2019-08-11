@@ -65,28 +65,34 @@ Install Python 3.7::
     [root ] $ make altinstall
     [root ] $ exit
 
-===============
-Install Pip3
-===============
+=======================================================
+Install and Configure VirtualEnv and VirtualEnvWrapper
+=======================================================
 
-Install python3-Tools and pip3::
+We will be installing both of these components using pip, the Python package manager. To get pip, we first need to enable the EPEL repository. We can do this easily by typing::
+
+    sudo yum install epel-release
+
+Once EPEL is enabled, we can install pip by typing::
+
+    sudo yum install python-pip
     
-    yum install python36
-    yum install python36-devel
-    yum install python36-setuptools
-    easy_install-3.6 pip
+Now that you have pip installed, we can install virtualenv and virtualenvwrapper globally by typing::
 
-==========================
-Create Virtualenv Python 3
-==========================
+    sudo pip install virtualenv virtualenvwrapper
+    
+With these components installed, we can now configure our shell with the information it needs to work with the virtualenvwrapper script. Our virtual environments will all be placed within a directory in our home folder called Env for easy access. This is configured through an environmental variable called WORKON_HOME. We can add this to our shell initialization script and can source the virtual environment wrapper script.
 
-Create virtual env with python3::
-   
-   virtualenv -p python3 django3
+To add the appropriate lines to your shell initialization script, you need to run the following commands::
 
-Activate venv::
+    echo "export WORKON_HOME=~/Env" >> ~/.bashrc
+    echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
-    source venv/bin/activate
+Now, source your shell initialization script so that you can use this functionality in your current session:
+
+    source ~/.bashrc
+
+You should now have directory called Env in your home folder which will hold virtual environment information.
 
 
 ===============
@@ -100,6 +106,9 @@ Steps fo installing Django::
 
     sudo yum install python-devel python-setuptools python34 python-pip
     yum -y install python-pip python-wheel
+    
+    django-admin.py startproject firstsite
+
 
 ================
 Install Postgres
