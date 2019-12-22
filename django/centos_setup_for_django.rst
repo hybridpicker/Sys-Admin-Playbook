@@ -94,6 +94,14 @@ Now, source your shell initialization script so that you can use this functional
 
 You should now have directory called Env in your home folder which will hold virtual environment information.
 
+========================
+Make Python3 Virtualenv
+========================
+
+With virtualenv::
+
+    virtualenv -p python3 <venvname>
+
 
 ===============
 Install Django
