@@ -29,7 +29,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-"Disable Arrow Keys
+" Disable Arrow Keys
 map <Down> <NOP>
 map <Up> <NOP>
 map <Right> <NOP>
