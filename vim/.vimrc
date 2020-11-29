@@ -28,7 +28,13 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
- 
+
+"Disable Arrow Keys
+map <Down> <NOP>
+map <Up> <NOP>
+map <Right> <NOP>
+map <Left> <NOP>
+
 " Automatic closing Brackets
 inoremap " ""<left>
 inoremap ' ''<left>
