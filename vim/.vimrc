@@ -51,7 +51,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-utils/vim-man'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 colorscheme gruvbox
