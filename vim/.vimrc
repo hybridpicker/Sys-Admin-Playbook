@@ -1,7 +1,7 @@
 syntax on  
 filetype off
 filetype plugin indent on
-  
+
 set ttyfast
 set nocompatible 
 
@@ -19,6 +19,9 @@ set number
 set nobackup
 set noswapfile
 set noshowmode
+set noerrorbells
+set smartindent
+set nowrap
 
 " Set the terminal's title
 set title
@@ -29,7 +32,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-" Disable Arrow Keys
+"Disable Arrow Keys
 map <Down> <NOP>
 map <Up> <NOP>
 map <Right> <NOP>
@@ -43,3 +46,13 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+" PlugIns
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'vim-utils/vim-man'
+Plug 'Valloric/YouCompleteMe'
+call plug#end()
+
+colorscheme gruvbox
+set background=dark
