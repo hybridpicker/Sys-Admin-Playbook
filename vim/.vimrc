@@ -18,7 +18,7 @@ set hidden
 set number
 set nobackup
 set noswapfile
-set noshowmode
+set showmode
 set noerrorbells
 set smartindent
 set nowrap
